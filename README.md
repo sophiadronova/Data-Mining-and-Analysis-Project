@@ -1,29 +1,21 @@
-# Data-Mining-and-Analysis-Project
+# Detecting Illicit Bitcoin Transactions
 
-## Motivation
-Financial fraud detection is a critical challenge due to the scale, anonymity, and evolving nature of cryptocurrency transactions. Understanding structural and temporal patterns of illicit activity in transaction networks can improve detection methods and support financial forensics.
+This project analyzes illicit financial activity using the Elliptic++ Bitcoin Transaction Dataset, a large transaction network, to understand how fraud can be detected in complex, real-world systems. It investigates three key approaches: structural graph analysis to uncover how illicit transactions behave within the network, anomaly detection to test whether fraud appears as unusual behavior, and supervised machine learning models to evaluate predictive performance. A central finding is that detecting fraud is inherently difficult—illicit transactions often closely resemble normal ones, and severe class imbalance means they are rare and easy to miss, causing anomaly detection methods to perform poorly. While graph structure reveals meaningful patterns, it is not sufficient on its own, and the strongest results come from combining rich features with supervised learning. This problem is important beyond cryptocurrency: in a world driven by massive volumes of digital transactions, improving fraud detection has real-world impact for financial security, preventing money laundering, and protecting individuals and institutions across all transaction-based systems.
 
-## Problem Statement
-The goal of this project is to analyze structural and temporal characteristics of illicit Bitcoin transactions and evaluate whether graph-based features can help distinguish illicit activity from licit behavior.
+### 👉 The main deliverable is main_notebook.ipynb
 
-## Dataset Summary
-The Elliptic++ dataset is a large-scale directed graph of Bitcoin transactions designed for studying illicit activity detection. The network contains approximately 203,769 transactions (nodes) connected by 234,355 directed edges representing money flows. Transactions are observed across 49 time steps, capturing the temporal evolution of the network. Each transaction includes numerical features describing transaction behavior, along with class labels indicating illicit, licit, or unknown status for a subset of nodes. The dataset exhibits severe class imbalance, with illicit transactions representing a small minority, and the graph structure is highly sparse and fragmented.
-
-## Key Findings (so far)
-- Severe class imbalance (illicit transactions are rare)
-- Network is sparse and fragmented
-- Degree distribution is highly skewed
-- Illicit transactions tend to have lower connectivity
-- Illicit activity varies across time steps
-
-## Key Limitations
-- Severe class imbalance
-- Many unlabeled nodes
-- Large graph size
-- Sparse connectivity
+## Research Questions
+- Do illicit transactions occupy distinct structural positions in the transaction graph, and how do these patterns evolve over time?
+- Can anomaly detection methods identify illicit transactions based on transaction features and graph-derived features?
+- Do Graph Neural Networks improve illicit transaction detection compared to classical approaches, and how does class imbalance handling affect their performance?
   
+## Project Video
+https://youtu.be/np0U2wd_VUs
+
 ## Dataset Source
-This project uses the Elliptic++ Bitcoin transaction dataset introduced in:
+This project uses the Elliptic++ Bitcoin transaction dataset
+
+Github: https://github.com/git-disl/EllipticPlusPlus/tree/main/Transactions%20Dataset
 
 Elmougy, Y., & Liu, L. (2023).
 Demystifying Fraudulent Transactions and Illicit Nodes in the Bitcoin Network for Financial Forensics.
