@@ -54,19 +54,9 @@ Run:
 `main_notebook.ipynb`
 from top to bottom.
 
+## Python Version
 
-## Key Dependencies
-
-- Python 3.10
-- pandas 2.x
-- numpy 1.x
-- scikit-learn 1.x
-- networkx 3.x
-- matplotlib 3.x
-- torch 2.x
-- torch-geometric
-
-(Full list available in `requirements.txt`)
+Python 3.12.13
 
 ## Repository Structure
 
